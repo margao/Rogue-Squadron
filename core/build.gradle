@@ -1,0 +1,13 @@
+apply plugin: "java"
+
+sourceCompatibility = 1.6
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+sourceSets.main.java.srcDirs = [ "src/" ]
+
+repositories { jcenter() }
+dependencies { testCompile "org.mockito:mockito-core:2.0.57-beta" }
+
+eclipse.project {
+    name = appName + "-core"
+}
